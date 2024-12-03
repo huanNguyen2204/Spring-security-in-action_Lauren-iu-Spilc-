@@ -19,4 +19,6 @@ public class WebAuthorizationConfig {
     );
     return http.build();
   }
+
+
 }

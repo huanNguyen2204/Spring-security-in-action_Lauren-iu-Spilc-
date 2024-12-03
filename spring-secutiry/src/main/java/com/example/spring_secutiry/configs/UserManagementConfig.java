@@ -12,7 +12,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class UserManagementConfig {
 
   /* Add first user init */
-  @Bean
+  @Bean(name = "userDetails1")
   public UserDetailsService userDetailsService() {
     var userDetailsService = new InMemoryUserDetailsManager();
     var user = User.withUsername("john")
@@ -24,7 +24,7 @@ public class UserManagementConfig {
   }
 
   /* Password for crypto */
-  @Bean
+  @Bean(name = "passwordEnd1")
   public PasswordEncoder passwordEncoder() {
     return NoOpPasswordEncoder.getInstance();
   }
